@@ -1,73 +1,63 @@
 <template>
-  <nav id="home-navbar" :class="{ transparent: hasTransparentBackground }">
+  <nav id="global-navbar">
     <div class="brand-container">
-      <img
-        src="/images/logo.png"
-        alt=""
-        class="brand"
-        :class="{ 'tlr--d-none': !hasTransparentBackground }"
-      />
-      <img
-        src="/images/logo-white.png"
-        alt=""
-        class="brand"
-        :class="{ 'tlr--d-none': hasTransparentBackground }"
-      />
+      <img src="/images/logo.png" alt="" class="brand" />
     </div>
-    <div @click="setCollapsed(false)" class="hamburger-container tlr--d-block tlr--d-none-tablet">
+    <div
+      @click="setCollapsed(false)"
+      class="hamburger-container tlr--d-block tlr--d-none-tablet"
+    >
       <i class="fas fa-bars"></i>
     </div>
-    <div class="nav-links" :class="{collapsed: collapsed}">
-      <div @click="setCollapsed(true)"  class="close-button-container tlr--d-flex tlr--d-none-tablet">
+    <div class="nav-links" :class="{ collapsed: collapsed }">
+      <div
+        @click="setCollapsed(true)"
+        class="close-button-container tlr--d-flex tlr--d-none-tablet"
+      >
         <i class="fas fa-times"></i>
       </div>
-      <a href="#" class="nav-link">Teach</a>
-      <a href="#" class="nav-link">Help</a>
-      <a href="#" class="nav-link">Login</a>
-      <a href="#" class="nav-link">Success Stories</a>
+      <a href="#" class="nav-link"
+        ><i class="fas fa-search"></i> Find a class</a
+      >
+      <a href="#" class="nav-link"
+        ><i class="fas fa-chalkboard-teacher"></i> Teach</a
+      >
+      <a href="#" class="nav-link"
+        ><i class="far fa-question-circle"></i> Help</a
+      >
+      <a href="#" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <button href="#" class="nav-link btn">Join for free</button>
     </div>
   </nav>
 </template>
 <script>
 export default {
-  props: {
-  },
+  props: {},
   data() {
     return {
       collapsed: true,
-      hasTransparentBackground: true
-    }
-  },
-  mounted(){
-    this.listenForEvents()
+      hasTransparentBackground: true,
+    };
   },
   methods: {
     setCollapsed(val) {
-      this.collapsed = val
+      this.collapsed = val;
     },
-    listenForEvents(){
-      this.$nuxt.$on('set-navbar-transparent', (val) => {
-        this.hasTransparentBackground = val
-      })
-    },
-  }
+  },
 };
 </script>
 
 <style lang="scss">
 @import "~assets/styles/variables";
-#home-navbar {
-  --background-color: #{$primaryColor-dark};
-  --text-color: white;
-  position: fixed;
+#global-navbar {
+  --background-color: white;
+  --text-color: #{$textColor};
+  box-shadow: 0px 3px 10px rgba($darkColor, 0.18);
+  position: sticky;
   z-index: 10;
   top: 0;
   right: 0;
   left: 0;
-
-  &.transparent {
-    --background-color: transparent;
-  }
 
   background-color: var(--background-color);
   transition: background-color 0.5s ease;
@@ -96,7 +86,7 @@ export default {
     --sidebar-width: 180px;
     display: flex;
     flex-direction: column;
-    background: $primaryColor-dark;
+    background: white;
     position: fixed;
     width: var(--sidebar-width);
     left: calc(100% - var(--sidebar-width));
@@ -111,7 +101,7 @@ export default {
       align-items: center;
       flex-direction: row;
       box-shadow: unset;
-      width: unset ;
+      width: unset;
     }
 
     &.collapsed {
@@ -126,13 +116,30 @@ export default {
     .nav-link {
       text-decoration: none;
       color: var(--text-color);
-      margin-right: 24px;
+      margin-right: 20px;
       margin-bottom: 8px;
       &:last-child {
         margin-bottom: 0;
       }
+
+      &.btn {
+        width: 100%;
+		padding: 12px 16px;
+		background: $primaryColor;
+		color: white;
+		border: none;
+		outline: none;
+		border-radius: 5px;
+		&:active {
+			outline: none;
+		}
+      }
       @media only screen and (min-width: 768px) {
         margin-bottom: 0;
+
+        &.btn {
+          width: unset;
+        }
 
         &:last-child {
           margin-right: 0;

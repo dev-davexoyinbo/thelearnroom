@@ -61,6 +61,7 @@ export default {};
   grid-template-columns: repeat(1, 1fr);
   font-size: 0.9rem;
   row-gap: 48px;
+  border-top: 1px solid $borderGray;
 
   
 

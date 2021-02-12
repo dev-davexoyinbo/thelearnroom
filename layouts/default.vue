@@ -1,8 +1,35 @@
 <template>
-  <div>
-    <Nuxt />
+  <div id="this-nuxt-app">
+    <global-navbar />
+    <info-strip />
+    <div id="this-nuxt-app-content">
+      <Nuxt />
+    </div>
+    <footer-component />
   </div>
 </template>
+<script>
+import FooterComponent from "~/components/footers/FooterComponent.vue";
+import InfoStrip from '~/components/InfoStrip.vue';
+import GlobalNavbar from "~/components/navbars/GlobalNavbar";
 
-<style>
+export default {
+  components: {
+    GlobalNavbar,
+    FooterComponent,
+    InfoStrip,
+  },
+};
+</script>
+
+<style scoped>
+#this-nuxt-app {
+  min-height: var(--viewport-height);
+  display: flex;
+  flex-direction: column;
+}
+
+#this-nuxt-app-content {
+  flex: 1;
+}
 </style>
