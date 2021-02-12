@@ -182,7 +182,7 @@ export default {
 
       &.fb {
         color: white;
-        background: $hightlightBlue;
+        background: $facebookBlue;
       }
 
       &.email {
