@@ -118,10 +118,16 @@ export default {
     display: flex;
   }
   .content {
-    padding: 24px;
+    padding: 16px;
     background: white;
     border-radius: 10px;
     width: 450px;
+	max-width: calc(100% - 32px);
+
+	@media only screen and (min-width: 425px) {
+		padding: 24px;
+
+	}
 
     .close-button-container {
       display: flex;
