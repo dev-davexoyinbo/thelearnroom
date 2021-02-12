@@ -2,7 +2,7 @@
   <section id="hero-section" ref="heroSection">
     <div class="content">
       <p class="text-content">Where Kids Explore New Topics & Love to Learn</p>
-      <button>Join For Free</button>
+      <button @click="openJoinModal()">Join For Free</button>
     </div>
   </section>
 </template>
@@ -15,6 +15,9 @@ export default {
     });
   },
   methods: {
+    openJoinModal() {
+      this.$nuxt.$emit('set-join-modal-state', true)
+    },
     oberserverForNavbar() {
       const element = this.$refs.heroSection;
 
@@ -75,6 +78,7 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 
     @media only screen and (min-width: 768px) {
       font-size: 2rem;
@@ -91,9 +95,13 @@ export default {
       padding: 12px 24px;
       border-radius: 5px;
       background: $primaryColor;
+      outline: none;
       font-weight: 400;
       font-size: 1.1rem;
       cursor: pointer;
+      &:active {
+        outline: none;
+      }
     }
   }
 }

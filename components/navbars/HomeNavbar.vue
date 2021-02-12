@@ -104,7 +104,7 @@ export default {
     bottom: 0;
     padding: 16px;
     box-shadow: -1px 1px 7px 0px #04192dab;
-    transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     @media only screen and (min-width: 768px) {
       background: transparent;
       position: initial;
