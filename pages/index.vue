@@ -1,6 +1,6 @@
 <template>
   <div>
-    This is the homepage
+    <hero-section />
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quis dicta vel quod reiciendis earum dignissimos? Aliquid, voluptate ipsam molestias enim quibusdam omnis numquam maxime vel, minima, tempore expedita dolore asperiores a! Quasi ratione, optio ex tenetur illum commodi dolorem ad aspernatur quisquam magnam vero quae consectetur numquam magni fuga aliquid consequuntur consequatur iure incidunt nostrum maxime? Voluptas officiis nihil quibusdam optio? Optio at aliquam consequatur temporibus tenetur suscipit atque et illo dolores, non expedita saepe doloremque aut impedit ipsa? Iste, ut dolorum. Facilis animi voluptate harum omnis at neque voluptatum, tenetur laborum deleniti similique. Quas sunt modi vel eveniet.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quis dicta vel quod reiciendis earum dignissimos? Aliquid, voluptate ipsam molestias enim quibusdam omnis numquam maxime vel, minima, tempore expedita dolore asperiores a! Quasi ratione, optio ex tenetur illum commodi dolorem ad aspernatur quisquam magnam vero quae consectetur numquam magni fuga aliquid consequuntur consequatur iure incidunt nostrum maxime? Voluptas officiis nihil quibusdam optio? Optio at aliquam consequatur temporibus tenetur suscipit atque et illo dolores, non expedita saepe doloremque aut impedit ipsa? Iste, ut dolorum. Facilis animi voluptate harum omnis at neque voluptatum, tenetur laborum deleniti similique. Quas sunt modi vel eveniet.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quis dicta vel quod reiciendis earum dignissimos? Aliquid, voluptate ipsam molestias enim quibusdam omnis numquam maxime vel, minima, tempore expedita dolore asperiores a! Quasi ratione, optio ex tenetur illum commodi dolorem ad aspernatur quisquam magnam vero quae consectetur numquam magni fuga aliquid consequuntur consequatur iure incidunt nostrum maxime? Voluptas officiis nihil quibusdam optio? Optio at aliquam consequatur temporibus tenetur suscipit atque et illo dolores, non expedita saepe doloremque aut impedit ipsa? Iste, ut dolorum. Facilis animi voluptate harum omnis at neque voluptatum, tenetur laborum deleniti similique. Quas sunt modi vel eveniet.</p>
@@ -32,7 +32,9 @@
 </template>
 
 <script>
+import HeroSection from '~/components/page_specific/home/HeroSection.vue'
 export default {
+  components: { HeroSection },
   layout: 'home',
 }
 </script>

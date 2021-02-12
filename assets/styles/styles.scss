@@ -2,7 +2,18 @@
 @import 'variables';
 @import 'displays';
 :root {
-    --body-padding: 32px;
+    --body-padding: 16px;
+    --viewport-height: 100vh;
+    --home-navbar-height: 64px;
+    @media only screen and (min-width: 425px) {
+        --body-padding: 32px;
+    }
+    @media only screen and (min-width: 768px) {
+        --body-padding: 48px;
+    }
+    @media only screen and (min-width: 1024px) {
+        --body-padding: 52px;
+    }
 }
 
 html {

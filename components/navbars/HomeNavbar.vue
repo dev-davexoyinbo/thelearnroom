@@ -31,19 +31,25 @@
 <script>
 export default {
   props: {
-    hasTransparentBackground: {
-      default: true,
-    },
   },
   data() {
     return {
       collapsed: true,
+      hasTransparentBackground: true
     }
+  },
+  mounted(){
+    this.listenForEvents()
   },
   methods: {
     setCollapsed(val) {
       this.collapsed = val
-    }
+    },
+    listenForEvents(){
+      this.$nuxt.$on('set-navbar-transparent', (val) => {
+        this.hasTransparentBackground = val
+      })
+    },
   }
 };
 </script>
@@ -54,6 +60,7 @@ export default {
   --background-color: #{$primaryColor-dark};
   --text-color: white;
   position: fixed;
+  z-index: 10;
   top: 0;
   right: 0;
   left: 0;
@@ -62,10 +69,11 @@ export default {
     --background-color: transparent;
   }
 
-  background: var(--background-color);
+  background-color: var(--background-color);
+  transition: background-color 0.5s ease;
   color: var(--text-color);
   padding: 0 var(--body-padding);
-  height: 64px;
+  height: var(--home-navbar-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -96,7 +104,7 @@ export default {
     bottom: 0;
     padding: 16px;
     box-shadow: -1px 1px 7px 0px #04192dab;
-    transition: left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     @media only screen and (min-width: 768px) {
       background: transparent;
       position: initial;
@@ -118,7 +126,7 @@ export default {
     .nav-link {
       text-decoration: none;
       color: var(--text-color);
-      margin-right: 8px;
+      margin-right: 24px;
       margin-bottom: 8px;
       &:last-child {
         margin-bottom: 0;
