@@ -1,0 +1,21 @@
+$css-prefix: 'tlr--';
+//Display sizes
+$display-sizes: (laptop-l: 1440px, laptop: 1024px, tablet: 768px, mobile-l: 425px, mobile: 375px, mobile-s: 320px);
+$display-types: (none, inline, block, flex, inline-block, inline-flex);
+@mixin display-mixin {
+    @each $d-type in $display-types {
+        .#{$css-prefix}d-#{$d-type} {
+            display: $d-type;
+        }
+        @each $key,
+        $val in $display-sizes {
+            .#{$css-prefix}d-#{$d-type}-#{$key} {
+                @media only screen and (min-width: $val) {
+                    display: $d-type !important;
+                }
+            }
+        }
+    }
+}
+
+@include display-mixin();
