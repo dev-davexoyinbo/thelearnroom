@@ -24,7 +24,7 @@ export default {
 
 	position: sticky;
 	top: var(--global-navbar-height);
-	z-index: 11;
+	z-index: 9;
 	box-shadow: 0px 3px 10px rgba($darkColor, 0.18);
 
 	a {

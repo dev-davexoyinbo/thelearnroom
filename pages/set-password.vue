@@ -13,7 +13,7 @@
         <button class="set-password-button">Continue</button>
         </div>
       </form>
-      <div class="sized-box-height" style="--height: 24px"></div>
+      <div class="sized-box-height" style="--height: 4px"></div>
 	  <p>You can also <a href="#">Log In</a>  or <a href="#">Sign in</a></p>
     </div>
   </div>
