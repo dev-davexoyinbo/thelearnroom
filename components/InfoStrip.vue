@@ -22,6 +22,11 @@ export default {
 	font-size: 0.9rem;
 	text-align: center;
 
+	position: sticky;
+	top: var(--global-navbar-height);
+	z-index: 11;
+	box-shadow: 0px 3px 10px rgba($darkColor, 0.18);
+
 	a {
 		color: white;
 	}

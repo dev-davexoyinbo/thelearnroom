@@ -2,6 +2,7 @@
   <div class="auth-page">
     <div class="content">
       <h2 class="heading">Log In</h2>
+      <div class="sized-box-height" style="--height: 4px"></div>
       <button class="auth-page-button fb">Continue with Facebook</button>
       <p class="or">or</p>
       <form action="" class="form">

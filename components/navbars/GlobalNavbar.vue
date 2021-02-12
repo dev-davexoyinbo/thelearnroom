@@ -63,7 +63,7 @@ export default {
   transition: background-color 0.5s ease;
   color: var(--text-color);
   padding: 0 var(--body-padding);
-  height: var(--home-navbar-height);
+  height: var(--global-navbar-height);
   display: flex;
   align-items: center;
   justify-content: space-between;

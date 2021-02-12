@@ -5,6 +5,7 @@
     --body-padding: 16px;
     --viewport-height: 100vh;
     --home-navbar-height: 64px;
+    --global-navbar-height: 64px;
     @media only screen and (min-width: 425px) {
         --body-padding: 32px;
     }
@@ -35,6 +36,11 @@ html {
     margin: 0;
 }
 
+.sized-box-height {
+    --height: 0;
+    height: var(--height);
+}
+
 //For authentication pages like login and register
 .auth-page {
     padding: 48px var(--body-padding);
@@ -50,9 +56,9 @@ html {
         }
         .heading {
             font-weight: 500;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             color: black;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         .auth-page-button {
             width: 100%;
