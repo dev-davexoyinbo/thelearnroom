@@ -96,12 +96,14 @@ export default {
     bottom: 0;
     padding: 16px;
     box-shadow: -1px 1px 7px 0px #04192dab;
-    transition: right 1s ease, left 1s ease;
+    transition: left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     @media only screen and (min-width: 768px) {
+      background: transparent;
       position: initial;
       align-items: center;
       flex-direction: row;
       box-shadow: unset;
+      width: unset ;
     }
 
     &.collapsed {
