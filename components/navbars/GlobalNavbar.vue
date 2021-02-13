@@ -60,7 +60,7 @@ export default {
 #global-navbar {
   --background-color: white;
   --text-color: #{$textColor};
-  box-shadow: 0px 3px 10px rgba($darkColor, 0.18);
+  box-shadow: 0px 3px 10px rgba($darkColor, 0.08);
   position: sticky;
   z-index: 10;
   top: 0;

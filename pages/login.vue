@@ -24,6 +24,7 @@
 
 <script>
 export default {
+  layout: 'auth',
   methods: {
     goToPage(path){
       event.preventDefault()

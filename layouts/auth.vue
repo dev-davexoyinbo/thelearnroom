@@ -1,7 +1,7 @@
 <template>
   <div id="this-nuxt-app">
     <global-navbar />
-    <info-strip :confirmEmail="true" :welcomeMessage="true"/>
+    <info-strip  :videoOffer="true" />
     <div id="this-nuxt-app-content">
       <Nuxt />
     </div>

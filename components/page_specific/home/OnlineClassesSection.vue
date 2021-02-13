@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import OnlineClassCard from './OnlineClassCard.vue';
+import OnlineClassCard from '~/components/cards/OnlineClassCard.vue';
 export default {
   components: { OnlineClassCard },};
 </script>
