@@ -6,11 +6,13 @@
       <Nuxt />
     </div>
     <footer-component />
+    <help-modal />
   </div>
 </template>
 <script>
 import FooterComponent from "~/components/footers/FooterComponent.vue";
 import InfoStrip from '~/components/InfoStrip.vue';
+import HelpModal from '~/components/modals/HelpModal.vue';
 import GlobalNavbar from "~/components/navbars/GlobalNavbar";
 
 export default {
@@ -18,6 +20,7 @@ export default {
     GlobalNavbar,
     FooterComponent,
     InfoStrip,
+    HelpModal,
   },
 };
 </script>

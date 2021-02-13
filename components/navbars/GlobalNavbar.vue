@@ -22,7 +22,7 @@
       <a href="#" class="nav-link"
         ><i class="fas fa-chalkboard-teacher"></i> Teach</a
       >
-      <a href="#" class="nav-link"
+      <a href="#" class="nav-link" @click.prevent="showHelpModal()"
         ><i class="far fa-question-circle"></i> Help</a
       >
       <a href="#" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
@@ -42,6 +42,10 @@ export default {
   methods: {
     setCollapsed(val) {
       this.collapsed = val;
+    },
+    showHelpModal() {
+      event.preventDefault()
+      this.$nuxt.$emit('set-help-modal-state', true)
     },
   },
 };
