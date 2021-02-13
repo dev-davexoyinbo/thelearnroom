@@ -1,10 +1,10 @@
 <template>
   <div>
     <hero-section />
-    <online-classes-section />
+    <!-- <online-classes-section />
     <customize-child-learning-section />
     <classes-by-subject-section />
-    <testimonial-section />
+    <testimonial-section /> -->
     <meet-our-teacher-section />
   </div>
 </template>

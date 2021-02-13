@@ -2,6 +2,7 @@
   <div>
     <home-navbar />
     <Nuxt />
+    <contact-us-footer />
     <footer-component />
     <join-modal />
     <help-modal />
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import ContactUsFooter from '~/components/footers/ContactUsFooter.vue';
 import FooterComponent from "~/components/footers/FooterComponent.vue";
 import HelpModal from '~/components/modals/HelpModal.vue';
 import JoinModal from "~/components/modals/JoinModal.vue";
@@ -20,6 +22,7 @@ export default {
     FooterComponent,
     JoinModal,
     HelpModal,
+    ContactUsFooter,
   },
 };
 </script>
