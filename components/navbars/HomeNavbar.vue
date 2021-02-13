@@ -62,6 +62,7 @@ export default {
 #home-navbar {
   --background-color: #{$primaryColor-dark};
   --text-color: white;
+  box-shadow: 0px 2px 10px rgba($darkBorderGray, 0.4);
   position: fixed;
   z-index: 10;
   top: 0;
@@ -70,6 +71,7 @@ export default {
 
   &.transparent {
     --background-color: transparent;
+    box-shadow: none;
   }
 
   background-color: var(--background-color);
