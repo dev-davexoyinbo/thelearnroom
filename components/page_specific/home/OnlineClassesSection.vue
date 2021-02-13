@@ -28,6 +28,7 @@ export default {
 @import '~assets/styles/variables';
 
 #online-classes-section {
+  margin-top: 16px 0;
   padding: 16px var(--body-padding);
   a {
     color: $primaryColor;
