@@ -122,9 +122,10 @@ export default {
   background: rgba(#000000, 0.5);
   overflow: hidden;
   overflow-y: auto;
-  padding: 32px 16px;
+  padding: 32px 8px;
 
-  @media only screen and (min-width: 435px) {
+  @media only screen and (min-width: 425px) {
+	  padding: 32px 16px;
     justify-content: flex-end;
   }
 
@@ -150,7 +151,7 @@ export default {
     --heading-inner-space: 50px;
     background: white;
     border-radius: 10px;
-    width: 320px;
+    width: 350px;
     max-width: 100%;
     height: fit-content;
     overflow: hidden;
