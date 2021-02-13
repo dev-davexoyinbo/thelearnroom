@@ -58,9 +58,11 @@ export default {
         this.isOpen = false;
       }, 500);
     },
-    openModal() {
+    async openModal() {
+      await this.$nextTick()
       document.scrollingElement.style.overflow = "hidden";
       const modal = this.$refs.modal;
+      // debugger
       if (modal.classList.contains("opening"))
         modal.classList.remove("opening");
 

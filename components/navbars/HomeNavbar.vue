@@ -1,6 +1,6 @@
 <template>
   <nav id="home-navbar" :class="{ transparent: hasTransparentBackground }">
-    <div class="brand-container">
+    <div class="brand-container" @click.prevent="goToPage('/')">
       <img
         src="/images/logo.png"
         alt=""
@@ -23,7 +23,7 @@
       </div>
       <a href="#" class="nav-link">Teach</a>
       <a href="#" class="nav-link" @click.prevent="showHelpModal()">Help</a>
-      <a href="#" class="nav-link">Login</a>
+      <a href="/login" class="nav-link" @click.prevent="goToPage('/login')">Login</a>
       <a href="#" class="nav-link">Success Stories</a>
     </div>
   </nav>
@@ -53,6 +53,10 @@ export default {
         this.hasTransparentBackground = val
       })
     },
+    goToPage(path){
+      event.preventDefault()
+      this.$nuxt.$router.push(path)
+    }
   }
 };
 </script>

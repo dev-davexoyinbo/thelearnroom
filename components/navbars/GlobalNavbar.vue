@@ -1,6 +1,6 @@
 <template>
   <nav id="global-navbar">
-    <div class="brand-container">
+    <div class="brand-container" @click.prevent="goToPage('/')">
       <img src="/images/logo.png" alt="" class="brand" />
     </div>
     <div
@@ -47,6 +47,10 @@ export default {
       event.preventDefault()
       this.$nuxt.$emit('set-help-modal-state', true)
     },
+    goToPage(path){
+      event.preventDefault()
+      this.$nuxt.$router.push(path)
+    }
   },
 };
 </script>
