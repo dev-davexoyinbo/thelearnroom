@@ -13,6 +13,14 @@
         <button>Join For Free</button>
       </div>
     </div>
+    <div class="featured-subsection">
+      <h2 class="sub-heading">Featured By</h2>
+      <div class="featured-container">
+        <div class="featured-brand" v-for="i in 6" :key="i">
+          <img :src="`/images/Brand-Logo-${i}.png`" alt="" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -69,9 +77,12 @@ export default {
 
   .interested-in-teaching-subsection {
     background: $offWhite;
+    margin-top: 48px;
+    margin-bottom: 48px;
     border: 1px solid #bab9b9;
     border-radius: 5px;
-    padding: 16px;
+    padding: 32px 16px;
+
     .highlight {
       text-align: center;
     }
@@ -79,20 +90,62 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
-	  margin-top: 12px;
-	  button {
-		  color: white;
-		  border: none;
-		  outline: none;
-		  background: $primaryColor;
-		  padding-left: 16px;
-		  padding-right: 16px;
-		  height: 30px;
-		  border-radius: 5px;
-		  &:active{
-			  outline: none;
-		  }
-	  }
+      margin-top: 16px;
+      button {
+        color: white;
+        border: none;
+        outline: none;
+        background: $primaryColor;
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 30px;
+        border-radius: 5px;
+        &:active {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .featured-subsection {
+    overflow: hidden;
+    .sub-heading {
+      margin-bottom: 32px;
+    }
+    .featured-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      row-gap: 32px;
+
+      @media only screen and (min-width: 768px) {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      @media only screen and (min-width: 1024px) {
+        gap: 32px;
+      }
+
+      .featured-brand {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media only screen and (min-width: 768px) {
+          height: 70px;
+        }
+        @media only screen and (min-width: 1024px) {
+          height: 100px;
+        }
+        img {
+          height: 100%;
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+        }
+      }
     }
   }
 }
