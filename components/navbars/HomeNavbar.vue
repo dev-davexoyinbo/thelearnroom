@@ -22,7 +22,7 @@
         <i class="fas fa-times"></i>
       </div>
       <a href="#" class="nav-link">Teach</a>
-      <a href="#" class="nav-link">Help</a>
+      <a href="#" class="nav-link" @click.prevent="showHelpModal()">Help</a>
       <a href="#" class="nav-link">Login</a>
       <a href="#" class="nav-link">Success Stories</a>
     </div>
@@ -45,8 +45,11 @@ export default {
     setCollapsed(val) {
       this.collapsed = val
     },
+    showHelpModal() {
+      this.$nuxt.$emit('set-help-modal-state', true)
+    },
     listenForEvents(){
-      this.$nuxt.$on('set-navbar-transparent', (val) => {
+      this.$nuxt.$on('set-home-navbar-transparent', (val) => {
         this.hasTransparentBackground = val
       })
     },

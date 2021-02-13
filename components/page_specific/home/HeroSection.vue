@@ -33,10 +33,10 @@ export default {
           console.log(entry);
           if (entry.isIntersecting) {
             // make navbar transparent
-            this.$nuxt.$emit("set-navbar-transparent", true);
+            this.$nuxt.$emit("set-home-navbar-transparent", true);
           } else {
             //make navbar solid colored
-            this.$nuxt.$emit("set-navbar-transparent", false);
+            this.$nuxt.$emit("set-home-navbar-transparent", false);
           }
         });
 
