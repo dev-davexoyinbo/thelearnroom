@@ -1,5 +1,5 @@
 <template>
-  <div id="meet-our-teacher-section">
+  <div id="meet-our-teacher-section" class="home-page-section" >
     <h1 class="heading">Meet Our Teachers</h1>
     <div class="cards-container">
       <div class="single-card-container" v-for="i in 4" :key="i">
@@ -34,8 +34,6 @@ export default {
 <style lang="scss">
 @import "~assets/styles/variables";
 #meet-our-teacher-section {
-  margin-top: 16px 0;
-  padding: 32px var(--body-padding);
   border-top: 1px solid $borderGray;
 
   & > .heading {

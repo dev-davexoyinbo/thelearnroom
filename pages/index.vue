@@ -29,4 +29,10 @@ export default {
 };
 </script>
 
+<style scoped>
+.home-page-section {
+  padding: 48px var(--body-padding);
+}
+</style>
+
     

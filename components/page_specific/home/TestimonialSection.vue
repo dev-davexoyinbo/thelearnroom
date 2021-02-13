@@ -1,5 +1,5 @@
 <template>
-  <section id="testimonial-section">
+  <section id="testimonial-section" class="home-page-section" >
     <h1 class="heading">Testimonial</h1>
     <div class="testimonials-container">
       <div class="angle-container left">
@@ -64,8 +64,6 @@ export default {
 <style lang="scss">
 @import "~assets/styles/variables";
 #testimonial-section {
-  margin-top: 16px 0;
-  padding: 32px var(--body-padding);
 
   & > .heading {
     color: black;

@@ -1,5 +1,5 @@
 <template>
-  <section id="classes-by-subject-section">
+  <section id="classes-by-subject-section" class="home-page-section" >
     <h1 class="heading">Classes by Subject</h1>
     <div class="cards-container">
       <div class="single-card-container" v-for="(datum, i) in clasesBySubjectData" :key="i">
@@ -321,8 +321,6 @@ export default {
 <style lang="scss">
 @import "~assets/styles/variables";
 #classes-by-subject-section {
-  margin-top: 16px 0;
-  padding: 32px var(--body-padding);
   background: $offWhite;
 
   & > .heading {color: black;

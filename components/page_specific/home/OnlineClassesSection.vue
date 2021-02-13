@@ -1,5 +1,5 @@
 <template>
-  <section id="online-classes-section">
+  <section id="online-classes-section" class="home-page-section">
     <div class="info-section">
       <h1 class="heading">Live Online Classes & Courses</h1>
       <p class="highlight">
@@ -28,8 +28,6 @@ export default {
 @import '~assets/styles/variables';
 
 #online-classes-section {
-  margin-top: 16px 0;
-  padding: 16px var(--body-padding);
   a {
     color: $primaryColor;
     text-decoration: none;

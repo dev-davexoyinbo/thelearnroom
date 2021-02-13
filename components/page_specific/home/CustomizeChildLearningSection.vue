@@ -1,5 +1,5 @@
 <template>
-  <section class="customize-child-learning-section">
+  <section id="customize-child-learning-section" class="home-page-section" >
     <h1 class="heading">Customise Your Child’s Learning</h1>
     <div class="cards-container">
       <div
@@ -45,10 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-.customize-child-learning-section {
-  margin-top: 16px 0;
-  padding: 32px var(--body-padding);
-
+#customize-child-learning-section {
   .heading {
     color: black;
     font-weight: 400;
