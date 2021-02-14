@@ -21,7 +21,7 @@
       <div @click="setCollapsed(true)"  class="close-button-container tlr--d-flex tlr--d-none-tablet">
         <i class="fas fa-times"></i>
       </div>
-      <a href="#" class="nav-link">Teach</a>
+      <a href="#" class="nav-link" @click.prevent="goToPage('/teachers/dashboard')">Teach</a>
       <a href="#" class="nav-link" @click.prevent="showHelpModal()">Help</a>
       <a href="/login" class="nav-link" @click.prevent="goToPage('/login')">Login</a>
       <a href="#" class="nav-link">Success Stories</a>

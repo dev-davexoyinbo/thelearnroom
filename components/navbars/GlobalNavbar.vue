@@ -22,7 +22,10 @@
         @click="goToPage('/students/find-class')"
         ><i class="fas fa-search"></i> Find a class</a
       >
-      <a href="#" class="nav-link"
+      <a
+        href="#"
+        class="nav-link"
+        @click.prevent="goToPage('/teachers/dashboard')"
         ><i class="fas fa-chalkboard-teacher"></i> Teach</a
       >
       <a href="#" class="nav-link" @click.prevent="showHelpModal()"
@@ -267,7 +270,7 @@ export default {
           .dropdown {
             --dropdown-padding: 16px;
             position: absolute;
-            
+
             color: #3c3c3c;
             top: calc(100% + var(--arrow-size));
             bottom: unset;
@@ -277,10 +280,6 @@ export default {
             width: 200px;
             text-align: left;
             display: none;
-
-            
-
-            
 
             &::after {
               content: "";
@@ -306,7 +305,7 @@ export default {
             }
 
             //for small screen height
-            @media only screen and (max-height: 660px) and (max-width: 767.98px){
+            @media only screen and (max-height: 660px) and (max-width: 767.98px) {
               position: fixed;
               z-index: 1;
               bottom: 16px;
