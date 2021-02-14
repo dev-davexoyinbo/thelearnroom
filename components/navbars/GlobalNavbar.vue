@@ -301,7 +301,7 @@ export default {
               right: 0;
               bottom: 0;
               left: 0;
-              background: rgba($darkColor, 0.1);
+              background: rgba($darkColor, 0.2);
               z-index: -1;
             }
 
