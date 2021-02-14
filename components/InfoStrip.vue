@@ -29,7 +29,7 @@ export default {
 		default: false,
 	},
 	welcomeMessageDuration: {
-		default: 10000
+		default: 5000
 	}
   },
   data() {
@@ -42,7 +42,7 @@ export default {
 		  this.showWelcomeMessage = true
 		  setTimeout(() => {
 			  // TODO: Change the value of the next line to false
-			  this.showWelcomeMessage = true
+			  this.showWelcomeMessage = false
 		  }, this.welcomeMessageDuration)
 	  }
   }

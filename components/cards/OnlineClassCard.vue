@@ -28,7 +28,7 @@ export default {};
 
 .online-class-card {
   width: 100%;
-  box-shadow: -2px 2px 10px rgba($darkBorderGray, 0.15);
+  box-shadow: -2px 5px 5px rgba($darkBorderGray, 0.15);
   .top {
     height: 150px;
     background: $placeholderGray;

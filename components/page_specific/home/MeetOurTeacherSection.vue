@@ -98,6 +98,7 @@ export default {
         padding-right: 16px;
         height: 30px;
         border-radius: 5px;
+        cursor: pointer;
         &:active {
           outline: none;
         }
