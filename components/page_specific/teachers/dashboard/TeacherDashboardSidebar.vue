@@ -1,5 +1,9 @@
 <template>
-  <aside id="teachers-dashboard-sidebar">
+  <aside id="teachers-dashboard-sidebar" :class="{collapsed: collpased}">
+    <div class="expand-collapse-button" :class="{collapsed: collpased}" @click="collpased = !collpased">
+      <i class="fas fa-angle-right"></i>
+    </div>
+
     <div class="last-update-box">
       <div class="small-box"></div>
       <span class="last-update-text">Last update 2021</span>
@@ -52,17 +56,17 @@
       </div>
     </div>
 
-	<div class="resources-container">
-		<h1 class="h1 heading">Resources</h1>
-		<div class="resources">
-			<a href="#">Help Center</a>
-			<a href="#">Training Center</a>
-			<a href="#">Teaching Resource</a>
-			<a href="#">Website Status</a>
-			<a href="#">Product Update</a>
-			<a href="#">Chat With Support</a>
-		</div>
-	</div>
+    <div class="resources-container">
+      <h1 class="h1 heading">Resources</h1>
+      <div class="resources">
+        <a href="#">Help Center</a>
+        <a href="#">Training Center</a>
+        <a href="#">Teaching Resource</a>
+        <a href="#">Website Status</a>
+        <a href="#">Product Update</a>
+        <a href="#">Chat With Support</a>
+      </div>
+    </div>
   </aside>
 </template>
 
@@ -71,15 +75,71 @@ import GenericButton from "~/components/buttons/GenericButton.vue";
 import TeacherSignupCard from "~/components/page_specific/teachers/dashboard/TeacherSignupCard.vue";
 export default {
   components: { GenericButton, TeacherSignupCard },
+  data() {
+    return {
+      collpased: false
+    }
+  }
 };
 </script>
 
 <style lang="scss">
 @import "~assets/styles/variables";
 #teachers-dashboard-sidebar {
-  width: 300px;
+  --sidebar-width: 250px;
+  --left-value: calc(var(--sidebar-width) * -1);
+
+  width: var(--sidebar-width);
   padding: 16px;
-  padding-top: 0;
+  position: fixed;
+  left:  var(--left-value);
+  top: calc(var(--teacher-navbar-height) + var(--info-strip-height));
+  bottom: 0;
+  overflow-y: auto;
+  background: white;
+  border-right: 1px solid $borderGray;
+  box-shadow: 2px 0px 8px rgba($darkBorderGray, 0.3);
+  transition: left ease-out 0.3s;
+
+  &.collapsed {
+    --left-value: 0px;
+
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 0;
+    padding-left: 0;
+    display: block;
+    --sidebar-width: 250px;
+    background: transparent;
+    position: unset;
+    box-shadow: unset;
+    border: none;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    --sidebar-width: 300px;
+  }
+
+  .expand-collapse-button {
+    position: fixed;
+    left: calc(var(--left-value) + var(--sidebar-width));
+    // top: calc(var(--teacher-navbar-height) + var(--info-strip-height) + 10px);
+    height: 40px;
+    width: 40px;
+    background: rgba(#8AB012, 0.6);
+     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    transition: left ease-out 0.3s, clip-path ease-out 1s;
+    
+
+    &.collapsed {
+      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+      background: rgba(#B0492C, 0.6);
+    }
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
 
   .last-update-box {
     padding: 24px 24px;
@@ -136,20 +196,20 @@ export default {
   }
 
   .resources-container {
-	  .heading {
-		  margin-bottom: 20px;
-	  }
+    .heading {
+      margin-bottom: 20px;
+    }
 
-	  .resources {
-		  a {
-			  text-decoration: none;
-			  color: $primaryColor;
-			  font-size: 0.9rem;
-			  display: flex;
-			  align-items: center;
-			  height: 30px;
-		  }
-	  }
+    .resources {
+      a {
+        text-decoration: none;
+        color: $primaryColor;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        height: 30px;
+      }
+    }
   }
 }
 </style>

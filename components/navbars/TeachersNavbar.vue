@@ -1,5 +1,5 @@
 <template>
-  <div class="teacher-navbar">
+  <div ref="teacherNavbar" class="teacher-navbar">
     <div class="top">
       <div class="heading">Teaching</div>
     </div>
@@ -21,7 +21,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted(){
+    this.heightChangeHooks();
+  },
+  updated() {
+    this.heightChangeHooks();
+  },
+  beforeDestroy() {
+    document.documentElement.style.setProperty("--teacher-navbar-height", "0px");
+  },
+  methods: {
+    heightChangeHooks() {
+      const teacherNavbar = this.$refs.teacherNavbar;
+      const height = getComputedStyle(teacherNavbar).height;
+
+      document.documentElement.style.setProperty("--teacher-navbar-height", height);
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -32,6 +50,7 @@ export default {};
   background: $darkColorAlt;
   position: sticky;
   top: var(--info-strip-height);
+  z-index: 9;
   .top {
     height: var(--teacher-navbar-top-height);
     display: flex;
