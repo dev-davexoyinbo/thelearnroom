@@ -95,7 +95,8 @@ export default {
       width: 1px;
       min-width: 1px;
       max-width: 1px;
-      margin-left: var(--margin-right);
+      margin-left: var(--body-padding);
+      // margin-left: 56px;
     }
 
     @media only screen and (min-width: 425px) {
@@ -125,6 +126,10 @@ export default {
       max-width: var(--card-width);
       min-width: var(--card-width);
       margin-right: var(--margin-right);
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       @media only screen and (min-width: 768px) {
         width: unset;

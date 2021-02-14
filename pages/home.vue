@@ -97,6 +97,8 @@ export default {
 #logged-in-home-page {
   .topics-container {
     padding: 0 var(--body-padding);
+    padding-right: 0;
+
     display: grid;
     grid-template-columns: max-content 1fr;
     gap: 16px;
@@ -122,6 +124,20 @@ export default {
         height: 0px;
         background: transparent;
         /* Chrome/Safari/Webkit */
+      }
+
+      &::after {
+        content: "";
+        display: flex;
+        width: 1px;
+        min-width: 1px;
+        max-width: 1px;
+        height: 1px;
+        margin-left: var(--body-padding);
+      }
+
+      @media only screen and (min-width: 768px) {
+        margin-right: 0;
       }
       .single-button-container {
         margin-right: 10px;
