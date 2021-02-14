@@ -57,6 +57,11 @@ export default {
       event.preventDefault()
       this.$nuxt.$router.push(path)
     }
+  },
+  watch: {
+    $route (to, from) {
+      this.setCollapsed(true)
+    }
   }
 };
 </script>

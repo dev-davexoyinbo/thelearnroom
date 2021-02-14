@@ -16,7 +16,7 @@
       >
         <i class="fas fa-times"></i>
       </div>
-      <a href="#" class="nav-link"
+      <a href="/students/find-class" class="nav-link" @click="goToPage('/students/find-class')"
         ><i class="fas fa-search"></i> Find a class</a
       >
       <a href="#" class="nav-link"
@@ -52,6 +52,11 @@ export default {
       this.$nuxt.$router.push(path)
     }
   },
+  watch: {
+    $route (to, from) {
+      this.setCollapsed(true)
+    }
+  }
 };
 </script>
 
