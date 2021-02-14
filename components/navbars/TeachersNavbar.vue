@@ -6,14 +6,14 @@
     <div class="bottom">
       <div class="tabs-container">
         <div class="tabs">
-          <a href="#" class="tab">Dashboard</a>
-          <a href="#" class="tab">Apply</a>
-          <a href="#" class="tab">Schedule</a>
-          <a href="#" class="tab">Section</a>
-          <a href="#" class="tab active">Classes</a>
-          <a href="#" class="tab">Profile</a>
-          <a href="#" class="tab">Availability</a>
-          <a href="#" class="tab">Stats</a>
+          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/dashboard`}" >Dashboard</a>
+          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/apply`}" >Apply</a>
+          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/schedule`}" >Schedule</a>
+          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/section`}" >Section</a>
+          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/classes`}" >Classes</a>
+          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/profile`}" >Profile</a>
+          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/availability`}" >Availability</a>
+          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/stats`}" >Stats</a>
         </div>
       </div>
     </div>

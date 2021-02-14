@@ -6,7 +6,7 @@
     --viewport-height: 100vh;
     --home-navbar-height: 64px;
     --global-navbar-height: 64px;
-    --teacher-navbar-top-height: 64px;
+    --teacher-navbar-top-height: 50px;
     --info-strip-height: 0px;
     @media only screen and (min-width: 425px) {
         --body-padding: 32px;
@@ -41,6 +41,41 @@ html {
 .sized-box-height {
     --height: 0;
     height: var(--height);
+}
+
+//headers
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 400;
+    color: black;
+}
+
+.h1 {
+    font-size: 1.7rem;
+}
+
+.h2 {
+    font-size: 1.5rem;
+}
+
+.h3 {
+    font-size: 1.3rem;
+}
+
+.h4 {
+    font-size: 1.1rem;
+}
+
+.h5 {
+    font-size: 0.9rem;
+}
+
+.h6 {
+    font-size: 0.8rem;
 }
 
 //For authentication pages like login and register

@@ -13,15 +13,35 @@ export default {
     gray : {
       default: false
     },
+    primary: {
+      default: false
+    },
     sizeFactor: {
       default: 1
+    },
+    primaryDark: {
+      default: false
+    },
+    bgLight: {
+      default: false
+    },
+    textPrimary: {
+      default: false
+    },
+    withShadow: {
+      default: false
     }
   },
   computed: {
     classes(){
       return {
         'no-border': this.noBorder,
-        gray: this.gray
+        gray: this.gray,
+        primary: this.primary,
+        'primary-dark': this.primaryDark,
+        'bg-light' : this.bgLight,
+        'text-primary': this.textPrimary,
+        'with-shadow': this.withShadow,
       }
     }
   }
@@ -54,6 +74,28 @@ export default {
   &.gray {
     background: #7A8CA9;
     color: white;
+  }
+
+  &.primary {
+    background: $primaryColor;
+    color: white;
+  }
+
+  &.primary-dark {
+    background: $primaryColor-dark-2;
+    color: white;
+  }
+
+  &.bg-light {
+    background: white;
+  }
+
+  &.text-primary {
+    color: $primaryColor;
+  }
+
+  &.with-shadow {
+    box-shadow: 1px 2px 5px rgba($darkColor, 0.3);
   }
 }
 </style>
