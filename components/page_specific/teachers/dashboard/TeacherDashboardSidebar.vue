@@ -68,9 +68,9 @@
 
 <script>
 import GenericButton from "~/components/buttons/GenericButton.vue";
-import TeachersSignupCard from "~/components/page_specific/teachers/dashboard/TeachersSignupCard.vue";
+import TeacherSignupCard from "~/components/page_specific/teachers/dashboard/TeacherSignupCard.vue";
 export default {
-  components: { GenericButton, TeachersSignupCard },
+  components: { GenericButton, TeacherSignupCard },
 };
 </script>
 
