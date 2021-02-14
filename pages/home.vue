@@ -3,8 +3,10 @@
     <div class="topics-container">
       <div class="heading">Topic: </div>
       <div class="topics-buttons-container">
-        <div class="single-button-container" v-for="i in 10" :key="i">
-          <generic-button :noBorder="true" :gray="true" />
+        <div class="single-button-container" v-for="topic in topics" :key="topic">
+          <generic-button :noBorder="true" :gray="true">
+            {{topic}}
+          </generic-button>
         </div>
       </div>
     </div>
@@ -65,6 +67,11 @@ export default {
     BrowseClassSection,
     GenericButton,
   },
+  data() {
+    return {
+      topics: ['Clubs', 'Dancing', 'Writing', 'History', 'Singing', 'Gaming', 'Anime', 'Escape']
+    }
+  }
 };
 </script>
 
