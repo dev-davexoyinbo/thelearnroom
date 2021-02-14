@@ -1,11 +1,15 @@
 <template>
   <div id="logged-in-home-page">
     <div class="topics-container">
-      <div class="heading">Topic: </div>
+      <div class="heading">Topic:</div>
       <div class="topics-buttons-container">
-        <div class="single-button-container" v-for="topic in topics" :key="topic">
+        <div
+          class="single-button-container"
+          v-for="topic in topics"
+          :key="topic"
+        >
           <generic-button :noBorder="true" :gray="true">
-            {{topic}}
+            {{ topic }}
           </generic-button>
         </div>
       </div>
@@ -38,18 +42,16 @@
 
     <classes-by-subject-section />
 
-    <section class="interested-section home-page-section">
-      <div class="interested-box">
-        <h1 class="heading">Intrested in something particular</h1>
-        <button class="submit-topic-button">Submit Topic</button>
-      </div>
-    </section>
+    <div class="home-page-section">
+      <interested-in-something-section />
+    </div>
   </div>
 </template>
 
 <script>
-import GenericButton from '~/components/buttons/GenericButton.vue';
-import BrowseClassSection from '~/components/page_specific/home/BrowseClassSection.vue';
+import GenericButton from "~/components/buttons/GenericButton.vue";
+import InterestedInSomethingSection from "~/components/InterestedInSomethingSection.vue";
+import BrowseClassSection from "~/components/page_specific/home/BrowseClassSection.vue";
 import ClassesBySubjectSection from "~/components/page_specific/home/ClassesBySubjectSection.vue";
 import CustomizeChildLearningSection from "~/components/page_specific/home/CustomizeChildLearningSection.vue";
 import HeroSection from "~/components/page_specific/home/HeroSection.vue";
@@ -66,12 +68,22 @@ export default {
     LoggedInOnlineClassesSection,
     BrowseClassSection,
     GenericButton,
+    InterestedInSomethingSection,
   },
   data() {
     return {
-      topics: ['Clubs', 'Dancing', 'Writing', 'History', 'Singing', 'Gaming', 'Anime', 'Escape']
-    }
-  }
+      topics: [
+        "Clubs",
+        "Dancing",
+        "Writing",
+        "History",
+        "Singing",
+        "Gaming",
+        "Anime",
+        "Escape",
+      ],
+    };
+  },
 };
 </script>
 
@@ -101,16 +113,16 @@ export default {
       align-items: center;
 
       scrollbar-width: none;
-    scroll-behavior: smooth;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE 10+ */
-    &::-webkit-scrollbar {
-      width: 0px;
-      height: 0px;
-      background: transparent;
-      /* Chrome/Safari/Webkit */
-    }
+      scroll-behavior: smooth;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE 10+ */
+      &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+        /* Chrome/Safari/Webkit */
+      }
       .single-button-container {
         margin-right: 10px;
         &:last-child {
@@ -145,10 +157,10 @@ export default {
       justify-content: center;
       flex-direction: column;
       background: $offWhite;
-      border: 1px solid #BAB9B9;
+      border: 1px solid #bab9b9;
       border-radius: 5px;
 
-      .heading{
+      .heading {
         display: inline-block;
         font-size: 1.7rem;
         color: black;

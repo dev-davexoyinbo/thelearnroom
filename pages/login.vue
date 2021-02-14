@@ -5,7 +5,7 @@
       <div class="sized-box-height" style="--height: 4px"></div>
       <button class="auth-page-button fb">Continue with Facebook</button>
       <p class="or">or</p>
-      <form action="" class="form">
+      <form action="" class="form" @submit.prevent="goToPage('/home')">
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" class="form-control" placeholder="Email">

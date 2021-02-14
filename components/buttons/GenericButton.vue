@@ -1,5 +1,5 @@
 <template>
-  <button class="generic-button" :class="classes">
+  <button class="generic-button" :class="classes" :style="{'--size-factor': this.sizeFactor}">
     <slot>Generic Button</slot>
   </button>
 </template>
@@ -12,6 +12,9 @@ export default {
     },
     gray : {
       default: false
+    },
+    sizeFactor: {
+      default: 1
     }
   },
   computed: {
@@ -28,14 +31,18 @@ export default {
 <style lang="scss">
 @import '~assets/styles/variables';
 .generic-button{
+  --size-factor: 1;
   background: $offWhite;
   border: 1px solid $borderGray;
-  border-radius: 5px;
+  border-radius: calc(var(--size-factor) * 5px);
   outline: none;
-  padding-right: 12px;
-  padding-left: 12px;
-  height: 30px;
+  padding-right: calc(var(--size-factor) * 12px);
+  padding-left: calc(var(--size-factor) * 12px);
+  height: calc(var(--size-factor) * 30px);
+  font-size: calc(var(--size-factor) * 1rem);;
   white-space: nowrap;
+  cursor: pointer;
+  color: #6E6E6E;
   &:active {
     outline: none;
   }

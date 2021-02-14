@@ -25,7 +25,7 @@
       <a href="#" class="nav-link" @click.prevent="showHelpModal()"
         ><i class="far fa-question-circle"></i> Help</a
       >
-      <a href="#" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <a href="/login" class="nav-link" @click="goToPage('/login')"><i class="fas fa-sign-in-alt"></i> Login</a>
       <button href="#" class="nav-link btn">Join for free</button>
     </div>
   </nav>

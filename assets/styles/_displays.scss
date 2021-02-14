@@ -19,3 +19,29 @@ $display-types: (none, inline, block, flex, inline-block, inline-flex);
 }
 
 @include display-mixin();
+$ja-properties: (stretch, baseline, unset, center, space-between, space-around, flex-start, flex-end);
+@mixin ja-mixin {
+    @each $p in $ja-properties {
+        .#{$css-prefix}justify-content-#{$p} {
+            justify-content: $p;
+        }
+        .#{$css-prefix}align-items-#{$p} {
+            align-items: $p;
+        }
+        @each $key,
+        $val in $display-sizes {
+            .#{$css-prefix}justify-content-#{$p}-#{$key} {
+                @media only screen and (min-width: $val) {
+                    justify-content: $p !important;
+                }
+            }
+            .#{$css-prefix}align-items-#{$p}-#{$key} {
+                @media only screen and (min-width: $val) {
+                    align-items: $p !important;
+                }
+            }
+        }
+    }
+}
+
+@include ja-mixin;
