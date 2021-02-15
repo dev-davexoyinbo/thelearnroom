@@ -190,3 +190,31 @@ html {
         }
     }
 }
+
+.table {
+    min-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    .th,
+    .td {
+        text-align: left;
+        font-weight: 400;
+        font-size: 0.9rem;
+        border: 1px solid #DADADA;
+        border-left: none;
+        border-right: none;
+        padding: 16px 8px;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    .th {
+        border-top: none;
+    }
+    .trow:last-child td {
+        border-bottom: none;
+    }
+}

@@ -60,7 +60,7 @@ export default {
 
   .buttons-container {
     display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-top: 16px;
     margin-bottom: 8px;
     & > * {
@@ -71,10 +71,10 @@ export default {
 
   .tuning-section {
     display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items: center;
-	margin-top: 32px;
-	& > * {
+    margin-top: 32px;
+    & > * {
       margin-bottom: 8px;
     }
     .tuning-select {
@@ -97,17 +97,17 @@ export default {
       margin-left: 8px;
     }
 
-	.show-enroll {
-		display: flex;
+    .show-enroll {
+      display: flex;
 
-		align-items: center;
-		font-size: 1.2rem;
-		color: black;
-		.icon{
-			margin-right: 6px;
-			color: $primaryColor;
-		}
-	}
+      align-items: center;
+      font-size: 1.2rem;
+      color: black;
+      .icon {
+        margin-right: 6px;
+        color: $primaryColor;
+      }
+    }
   }
 }
 </style>
