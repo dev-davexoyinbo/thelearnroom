@@ -19,7 +19,7 @@ $display-types: (none, inline, block, flex, inline-block, inline-flex);
 }
 
 @include display-mixin();
-$ja-properties: (stretch, baseline, unset, center, space-between, space-around, flex-start, flex-end);
+$ja-properties: (stretch, baseline, unset, center, start, space-between, space-around, flex-start, flex-end);
 @mixin ja-mixin {
     @each $p in $ja-properties {
         .#{$css-prefix}justify-content-#{$p} {

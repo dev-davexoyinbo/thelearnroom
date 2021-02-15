@@ -151,7 +151,14 @@ html {
             outline: none;
         }
         &.sm {
-            max-width: 200px;
+            max-width: 180px;
+        }
+        &.md {
+            max-width: 300px;
+        }
+        &.muted {
+            background: #EEEEEE;
+            cursor: not-allowed;
         }
     }
     input.form-control {
