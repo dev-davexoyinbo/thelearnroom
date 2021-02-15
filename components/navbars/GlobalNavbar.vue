@@ -134,9 +134,10 @@ export default {
     profileDropdownListener(event) {
       const profileDropdown = this.$refs.profileDropdown;
       const dropdownList = this.$refs.dropdownList;
+      const eventPath = event.path || event.composedPath()
 
-      if (event.path.some((el) => el == profileDropdown)) {
-        if (!event.path.some((el) => el == dropdownList)) {
+      if (eventPath.some((el) => el == profileDropdown)) {
+        if (!eventPath.some((el) => el == dropdownList)) {
           event.preventDefault();
           this.isShowingProfileDropdown = false;
         }

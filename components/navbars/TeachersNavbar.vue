@@ -6,14 +6,14 @@
     <div class="bottom">
       <div class="tabs-container">
         <div class="tabs">
-          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/dashboard`}" >Dashboard</a>
-          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/apply`}" >Apply</a>
-          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/schedule`}" >Schedule</a>
-          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/section`}" >Section</a>
-          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/classes`}" >Classes</a>
-          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/profile`}" >Profile</a>
-          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/availability`}" >Availability</a>
-          <a href="#" class="tab" :class="{active: $nuxt.$route.path==`/teachers/stats`}" >Stats</a>
+          <a href="#" class="tab" @click="goToPage(`/teachers/dashboard`)" :class="{active: $nuxt.$route.path==`/teachers/dashboard`}" >Dashboard</a>
+          <a href="#" class="tab" @click="goToPage(`/teachers/apply`)" :class="{active: $nuxt.$route.path==`/teachers/apply`}" >Apply</a>
+          <a href="#" class="tab" @click="goToPage(`/teachers/schedule`)" :class="{active: $nuxt.$route.path==`/teachers/schedule`}" >Schedule</a>
+          <a href="#" class="tab" @click="goToPage(`/teachers/section`)" :class="{active: $nuxt.$route.path==`/teachers/section`}" >Section</a>
+          <a href="#" class="tab" @click="goToPage(`/teachers/classes`)" :class="{active: $nuxt.$route.path==`/teachers/classes`}" >Classes</a>
+          <a href="#" class="tab" @click="goToPage(`/teachers/profile`)" :class="{active: $nuxt.$route.path==`/teachers/profile`}" >Profile</a>
+          <a href="#" class="tab" @click="goToPage(`/teachers/availability`)" :class="{active: $nuxt.$route.path==`/teachers/availability`}" >Availability</a>
+          <a href="#" class="tab" @click="goToPage(`/teachers/stats`)" :class="{active: $nuxt.$route.path==`/teachers/stats`}" >Stats</a>
         </div>
       </div>
     </div>
@@ -38,6 +38,10 @@ export default {
 
       document.documentElement.style.setProperty("--teacher-navbar-height", height);
     },
+    goToPage(path){
+      event.preventDefault()
+      this.$nuxt.$router.push(path)
+    }
   },
 };
 </script>
