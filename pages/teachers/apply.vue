@@ -150,13 +150,20 @@
       <div class="submit-section">
         <div class="form-group">
           <div class="tnc-container">
-            <input hidden ref="tncCheckbox" class="tnc-checkbox" type="checkbox" name="" id="" />
+            <input
+              hidden
+              ref="tncCheckbox"
+              class="tnc-checkbox"
+              type="checkbox"
+              name=""
+              id=""
+            />
             <div class="checkbox-placeholder" @click="tncCheckboxClicked()">
               <i class="fas fa-check"></i>
             </div>
             <span>
-
-            I agree to the <a href="#"> Terms & Conditions , Community Standards</a> 
+              I agree to the
+              <a href="#"> Terms & Conditions , Community Standards</a>
             </span>
           </div>
         </div>
@@ -172,11 +179,11 @@ export default {
   components: { GenericButton },
   layout: "teachers",
   methods: {
-    tncCheckboxClicked(){ 
-     const tncCheckbox = this.$refs.tncCheckbox
-     tncCheckbox.checked = !tncCheckbox.checked 
-    }
-  }
+    tncCheckboxClicked() {
+      const tncCheckbox = this.$refs.tncCheckbox;
+      tncCheckbox.checked = !tncCheckbox.checked;
+    },
+  },
 };
 </script>
 
@@ -232,7 +239,7 @@ export default {
   .tnc-container {
     display: inline-flex;
     width: fit-content;
-    align-items: center;
+    // align-items: center;
     color: #343434;
 
     .checkbox-placeholder {
@@ -259,9 +266,9 @@ export default {
   .submit-button {
     height: 40px;
     width: 100%;
-    outline:none;
-    background: #F1F1F1;
-    border: 1px solid #B8B7B7;
+    outline: none;
+    background: #f1f1f1;
+    border: 1px solid #b8b7b7;
     color: #535353;
     cursor: pointer;
 
